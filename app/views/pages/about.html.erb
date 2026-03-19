@@ -33,6 +33,7 @@
       <li>Players: <%= Player.count %></li>
       <li>Stat Records: <%= Stat.count %></li>
       <li>Total Rows: <%= Team.count + Player.count + Stat.count %></li>
+      <li>Players: <%= Player.count %> (<%= Player.where.not(date_of_birth: nil).count %> with birthdate)</li>
     </ul>
   </div>
 </div>
