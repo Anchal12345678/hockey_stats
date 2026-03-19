@@ -45,6 +45,14 @@
             </tr>
           <% end %>
         </tbody>
+        <tr class="table-dark">
+  <td><strong>Career Total</strong></td>
+  <td><strong><%= @stats.sum(:games_played) %></strong></td>
+  <td><strong><%= @stats.sum(:goals) %></strong></td>
+  <td><strong><%= @stats.sum(:assists) %></strong></td>
+  <td><strong><%= @stats.sum(:points) %></strong></td>
+  <td></td>
+</tr>
       </table>
     <% else %>
       <p class="text-muted">No stats available for this player.</p>
