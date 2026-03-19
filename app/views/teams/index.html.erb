@@ -11,6 +11,7 @@
             <h5 class="card-title"><%= team.name %></h5>
             <p class="card-text text-muted"><%= team.city %></p>
             <span class="badge bg-secondary"><%= team.division %></span>
+            <span class="badge bg-dark ms-1"><%= team.players.count %> players</span>
             <div class="mt-2">
               <%= link_to "View Roster", team_path(team), class: "btn btn-sm btn-dark" %>
             </div>
