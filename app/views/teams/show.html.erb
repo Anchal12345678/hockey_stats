@@ -9,6 +9,7 @@
         <p><strong>Conference:</strong> <%= @team.conference %></p>
         <p><strong>Division:</strong> <%= @team.division %></p>
         <p><strong>Players:</strong> <%= @team.players.count %></p>
+        <p><strong>Full Name:</strong> <%= @team.city %> <%= @team.name %></p>
       </div>
     </div>
     <%= link_to "← Back to All Teams", teams_path, class: "btn btn-secondary mt-2" %>
