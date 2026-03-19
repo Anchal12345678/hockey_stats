@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-md-4">
+    <div class="card shadow mb-4">
+      <div class="card-header bg-dark text-white">
+        <h3 class="mb-0"><%= @player.first_name %> <%= @player.last_name %></h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Position:</strong> <%= @player.position %></p>
+        <p><strong>Nationality:</strong> <%= @player.nationality %></p>
+        <p><strong>Date of Birth:</strong> <%= @player.date_of_birth&.strftime("%B %d, %Y") %></p>
+        <p><strong>Team:</strong> <%= link_to @player.team.name, team_path(@player.team) %></p>
+        <% if @player.position == "Goalie" %>
+          <span class="badge bg-warning text-dark">Goaltender</span>
+        <% else %>
+          <span class="badge bg-info text-dark">Skater</span>
+        <% end %>
+      </div>
+    </div>
+    <%= link_to "← Back to Players", players_path, class: "btn btn-secondary" %>
+  </div>
+
+  <div class="col-md-8">
+    <h3>Season Statistics</h3>
+    <% if @stats.any? %>
+      <table class="table table-striped table-hover shadow-sm">
+        <thead class="table-dark">
+          <tr>
+            <th>Season</th>
+            <th>GP</th>
+            <th>Goals</th>
+            <th>Assists</th>
+            <th>Points</th>
+            <th>+/-</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @stats.each do |stat| %>
+            <tr>
+              <td><%= stat.season %></td>
+              <td><%= stat.games_played %></td>
+              <td><%= stat.goals %></td>
+              <td><%= stat.assists %></td>
+              <td><strong><%= stat.points %></strong></td>
+              <td><%= stat.plus_minus %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% else %>
+      <p class="text-muted">No stats available for this player.</p>
+    <% end %>
+  </div>
+</div>

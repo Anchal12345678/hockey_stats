@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-8 offset-md-2">
+    <h1>About This App</h1>
+    <hr>
+
+    <h3>Data Sources</h3>
+    <p>This application uses three data sources:</p>
+    <ul>
+      <li><strong>CSV File 1 - Teams:</strong> A curated CSV file containing all 32 NHL teams with their city, conference, and division information.</li>
+      <li><strong>CSV File 2 - Players:</strong> A CSV file containing 30 real NHL star players with their position, nationality, and team.</li>
+      <li><strong>Faker Gem:</strong> Additional fake player data was generated using the Faker gem to populate each team with realistic-looking player rosters.</li>
+    </ul>
+
+    <h3>Database Structure</h3>
+    <p>The application uses three database tables:</p>
+    <ul>
+      <li><strong>Teams</strong> - Stores NHL team information (name, city, conference, division)</li>
+      <li><strong>Players</strong> - Stores player information linked to a team (name, position, nationality, date of birth)</li>
+      <li><strong>Stats</strong> - Stores season statistics for each player (goals, assists, points, plus/minus)</li>
+    </ul>
+
+    <h3>Relationships</h3>
+    <ul>
+      <li>A <strong>Team</strong> has many <strong>Players</strong></li>
+      <li>A <strong>Player</strong> belongs to a <strong>Team</strong></li>
+      <li>A <strong>Player</strong> has many <strong>Stats</strong> (one per season)</li>
+      <li>A <strong>Stat</strong> belongs to a <strong>Player</strong></li>
+    </ul>
+
+    <h3>Total Data</h3>
+    <ul>
+      <li>Teams: <%= Team.count %></li>
+      <li>Players: <%= Player.count %></li>
+      <li>Stat Records: <%= Stat.count %></li>
+      <li>Total Rows: <%= Team.count + Player.count + Stat.count %></li>
+    </ul>
+  </div>
+</div>

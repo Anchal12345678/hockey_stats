@@ -1,0 +1,33 @@
+name,city,conference,division
+Maple Leafs,Toronto,Eastern,Atlantic
+Canadiens,Montreal,Eastern,Atlantic
+Senators,Ottawa,Eastern,Atlantic
+Sabres,Buffalo,Eastern,Atlantic
+Red Wings,Detroit,Eastern,Atlantic
+Bruins,Boston,Eastern,Atlantic
+Flames,Calgary,Western,Pacific
+Oilers,Edmonton,Western,Pacific
+Canucks,Vancouver,Western,Pacific
+Jets,Winnipeg,Western,Central
+Avalanche,Colorado,Western,Central
+Stars,Dallas,Western,Central
+Blackhawks,Chicago,Western,Central
+Blues,St. Louis,Western,Central
+Wild,Minnesota,Western,Central
+Rangers,New York,Eastern,Metropolitan
+Flyers,Philadelphia,Eastern,Metropolitan
+Penguins,Pittsburgh,Eastern,Metropolitan
+Capitals,Washington,Eastern,Metropolitan
+Devils,New Jersey,Eastern,Metropolitan
+Lightning,Tampa Bay,Eastern,Atlantic
+Panthers,Florida,Eastern,Atlantic
+Hurricanes,Carolina,Eastern,Metropolitan
+Blue Jackets,Columbus,Eastern,Metropolitan
+Islanders,New York,Eastern,Metropolitan
+Kings,Los Angeles,Western,Pacific
+Ducks,Anaheim,Western,Pacific
+Sharks,San Jose,Western,Pacific
+Golden Knights,Vegas,Western,Pacific
+Kraken,Seattle,Western,Pacific
+Coyotes,Arizona,Western,Central
+Predators,Nashville,Western,Central

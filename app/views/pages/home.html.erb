@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="col-12 text-center py-5 bg-dark text-white rounded mb-4">
+    <h1>🏒 NHL Hockey Stats</h1>
+    <p class="lead">Explore teams, players, and statistics from the NHL</p>
+    <div class="mt-3">
+      <%= link_to "Browse Teams", teams_path, class: "btn btn-warning me-2" %>
+      <%= link_to "Browse Players", players_path, class: "btn btn-light me-2" %>
+      <%= link_to "Stats Leaderboard", stats_path, class: "btn btn-outline-light" %>
+    </div>
+  </div>
+</div>
+
+<div class="row text-center">
+  <div class="col-md-4">
+    <div class="card mb-4 shadow">
+      <div class="card-body">
+        <h2 class="display-4">🏙️</h2>
+        <h5 class="card-title">Teams</h5>
+        <p class="card-text"><%= Team.count %> NHL Teams</p>
+        <%= link_to "View All Teams", teams_path, class: "btn btn-dark" %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card mb-4 shadow">
+      <div class="card-body">
+        <h2 class="display-4">🏒</h2>
+        <h5 class="card-title">Players</h5>
+        <p class="card-text"><%= Player.count %> Players</p>
+        <%= link_to "View All Players", players_path, class: "btn btn-dark" %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card mb-4 shadow">
+      <div class="card-body">
+        <h2 class="display-4">📊</h2>
+        <h5 class="card-title">Stats</h5>
+        <p class="card-text"><%= Stat.count %> Season Records</p>
+        <%= link_to "View Leaderboard", stats_path, class: "btn btn-dark" %>
+      </div>
+    </div>
+  </div>
+</div>

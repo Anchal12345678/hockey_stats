@@ -1,0 +1,23 @@
+<h1>NHL Teams</h1>
+<hr>
+
+<% ['Eastern', 'Western'].each do |conference| %>
+  <h3><%= conference %> Conference</h3>
+  <div class="row">
+    <% Team.where(conference: conference).order(:division, :name).each do |team| %>
+      <div class="col-md-3 mb-3">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title"><%= team.name %></h5>
+            <p class="card-text text-muted"><%= team.city %></p>
+            <span class="badge bg-secondary"><%= team.division %></span>
+            <div class="mt-2">
+              <%= link_to "View Roster", team_path(team), class: "btn btn-sm btn-dark" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <hr>
+<% end %>
