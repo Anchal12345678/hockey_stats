@@ -15,7 +15,7 @@
     <div class="card mb-4 shadow">
       <div class="card-body">
         <h2 class="display-4">🏙️</h2>
-        <h5 class="card-title">Teams</h5>
+       <h3 class="card-title">Teams</h3>
         <p class="card-text"><%= Team.count %> NHL Teams</p>
         <%= link_to "View All Teams", teams_path, class: "btn btn-dark" %>
       </div>
@@ -25,7 +25,7 @@
     <div class="card mb-4 shadow">
       <div class="card-body">
         <h2 class="display-4">🏒</h2>
-        <h5 class="card-title">Players</h5>
+        <h3 class="card-title">Players</h3>
         <p class="card-text"><%= Player.count %> Players</p>
         <%= link_to "View All Players", players_path, class: "btn btn-dark" %>
       </div>
@@ -35,7 +35,7 @@
     <div class="card mb-4 shadow">
       <div class="card-body">
         <h2 class="display-4">📊</h2>
-        <h5 class="card-title">Stats</h5>
+        <h3 class="card-title">Stats</h3>
         <p class="card-text"><%= Stat.count %> Season Records</p>
         <%= link_to "View Leaderboard", stats_path, class: "btn btn-dark" %>
       </div>
